@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +92,52 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-fotomadani-cream text-fotomadani-navy font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .container-wide {
+    @apply container max-w-7xl mx-auto px-4 sm:px-6;
+  }
+  
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+  
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  
+  .heading-md {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  
+  .btn-primary {
+    @apply bg-fotomadani-navy text-white px-6 py-3 rounded-sm hover:bg-opacity-90 transition-all;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-fotomadani-navy text-fotomadani-navy px-6 py-3 rounded-sm hover:bg-fotomadani-navy hover:text-white transition-all;
+  }
+  
+  .nav-link {
+    @apply relative text-fotomadani-navy hover:text-fotomadani-slate transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-fotomadani-slate hover:after:w-full after:transition-all;
+  }
+  
+  .image-hover {
+    @apply overflow-hidden;
+  }
+  
+  .image-hover img {
+    @apply transition-transform duration-500 ease-in-out hover:scale-105;
   }
 }
